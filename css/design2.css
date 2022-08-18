@@ -198,12 +198,30 @@ section.success {
   background: #18BC9C;
   color: white;
 }
-@media (max-width: 767px) {
+@media (min-width: 10px) and (max-width: 767px) {
+  .navbar-left { /*logo disappear mobile*/
+    display: none;
+  }
   section {
     padding: 75px 0;
   }
   section.first {
     padding-top: 75px;
+  }
+  .responsive-iframe {/*map mobile*/
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    overflow: hidden;
+    box-sizing: border-box;
+    margin-right: auto;
+  }
+  div.mapbox {
+    width: 80% !important;
+    height: 100% !important;
+    overflow: hidden;
+    box-sizing: border-box;
   }
 }
 #portfolio .portfolio-item {
